@@ -17,3 +17,14 @@ console.log(alphabet.length);
 
 // Explain why alphabet length is now 24
 // How could we change the functions we defined to return the same values, but not change the length of alphabet?
+
+/*
+shift = returns 1st item and removes it from the arr
+pop = returns last item and removes it from the arr
+alphabet array length = 26
+shift and pop applied to alphabet 
+length is now = 24
+
+copy the array inside the functions using spread operator to avoid mutating the original array
+[...alphabet]
+*/

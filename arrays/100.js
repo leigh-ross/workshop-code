@@ -7,3 +7,11 @@ const result = cities.push("Liverpool", "Sheffield");
 
 console.log(`The result is ${result}`);
 console.log("cities now looks like this: ", cities);
+
+/*
+cities is an array with length = 5
+result refers to cities - not a copy
+result is cities with 2 items added
+cities length = 7
+cities = ["Manchester", "London", "Birmingham", "Cape Town", "Glasgow", "Liverpool", "Sheffield"]
+*/
