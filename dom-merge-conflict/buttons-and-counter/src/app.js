@@ -1,41 +1,24 @@
 //increments the number in a node's text
+import {makeHeader} from "../src/header"
+import {makeMain} from "../src/main"
+
 function increment(node) {
   let current = node.textContent;
   node.textContent = Number(current) + 1;
 }
 
-function decrement(node) {
-  let current = node.textContent;
-  node.textContent = Number(current) - 1;
-}
-
 export function App() {
   const body = document.createElement("body");
+  const header = makeHeader();
+  const main = makeMain();
 
-  const header = document.createElement("header");
-  header.innerHTML = `
-        <h1>Number Counter</h1>
-        <p>A simple counter. Press increment to increase the count by one. Press decrement to decrease the amount by one.</p>
-    `;
-  body.appendChild(header);
-
-  const main = document.createElement("main");
-  main.innerHTML = `
-        <p id="counter" data-testid="counter">0</p>
-        <button id="increment">Increment</button>
-        <button id="decrement">Decrement</button>
-    `;
-  body.appendChild(main);
-
+  body.append(header);
+  body.append(main);
+  
   const ibutton = body.querySelector("#increment");
-  const dbutton = body.querySelector("#decrement");
   const counter = body.querySelector("#counter");
   ibutton.addEventListener("click", () => {
     increment(counter);
-  });
-
-   dbutton.addEventListener("click", () => {
-    decrement(counter);
   });
 
   return body;
