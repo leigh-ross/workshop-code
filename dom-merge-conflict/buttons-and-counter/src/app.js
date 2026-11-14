@@ -14,10 +14,10 @@ export function App() {
 
   body.append(header);
   body.append(main);
-
-  const button = body.querySelector("#increment");
+  
+  const ibutton = body.querySelector("#increment");
   const counter = body.querySelector("#counter");
-  button.addEventListener("click", () => {
+  ibutton.addEventListener("click", () => {
     increment(counter);
   });
 
