@@ -8,8 +8,12 @@ function increment(node) {
 }
 
 export function App() {
-  makeHeader();
-  makeMain();
+  const body = document.createElement("body");
+  const header = makeHeader();
+  const main = makeMain();
+
+  body.append(header);
+  body.append(main);
 
   const button = body.querySelector("#increment");
   const counter = body.querySelector("#counter");

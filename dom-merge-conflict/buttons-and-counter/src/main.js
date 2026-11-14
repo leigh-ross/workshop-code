@@ -4,5 +4,5 @@ export function makeMain() {
         <p id="counter" data-testid="counter">0</p>
         <button id="increment">Increment</button>
     `;
-  body.appendChild(main);
+  return main;
 }
